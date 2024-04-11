@@ -2,19 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Page</title>
-  <link rel="stylesheet" href="CSS/bootstrap.min.css">
-  <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
 
-  <script src="JS/jquery-3.7.1.min.js"></script>
-  <script src="JS/bootstrap.min.js"></script>
-  <script src="JS/script.js"></script>
+                <!-- navbar-header表示导航栏的头部，其中包含了一个a标签和一个div标签，用于显示网站的logo -->
+                <div class="navbar-header">
+                    <!-- a标签的作用是使图片可以被点击 -->
+                    <!-- d-none指全部不显示，d-sm-block指在sm以上显示 -->
+                    <a href="index.html" class="pull-left visible-md visible-lg">
+                        <!-- div的作用是使图片可以被显示，alt是当图片无法显示时显示的文字 -->
+                        <div id="logo-img" alt="Logo image"></div>
+                    </a>
+
+                    <!-- navbar-brand表示导航栏的标题，其中包含了一个h1标签和一个p标签，用于显示网站的标题和小图标 -->
+                    <div class="navbar-brand">
+                        <!-- a标签的作用是使标题可以被点击 -->
+                        <a href="index.html">
+                            <h1>MuYang's WebSite</h1>
+                        </a>
+                        <p><img src="images/star-logo.png" alt="this is Logo">
+                            <span>这里是我的logo</span>
+                        </p>
+                    </div>
+                    <!-- d-sm-none表示在sm以下不显示，这里是折叠按钮 -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#collapsable-nav" aria-expanded="false">
+                        <!-- 这是一个屏幕阅读器专用的元素，用于描述折叠按钮的功能 -->
+                        <span class="sr-only">Toggle navigation</span>
+                        <!-- 这里每一个span标签都是一个横线，三个横线组成了一个折叠按钮 -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <!-- 这里是右侧的图标-->
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+                        </li>
+                        <!-- hidden-xs在小屏幕设备上隐藏这个列表项 -->
+                        <li id="phone" class="hidden-xs">
+                            <a href="https://qm.qq.com/q/cZi1spE3Ly" target="_blank">
+                                <span>contact me</span></a>
+                            <div>* From Young</div>
+                        </li>
+                    </ul><!-- #nav-list -->
+                </div><!-- .collapse .navbar-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>
