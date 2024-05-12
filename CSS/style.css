@@ -155,4 +155,16 @@ body {
         /* 图片logo */
         height: 20px;
     }
+
+    #collapsable-nav a {
+        /* 控制右侧小图片和文字的大小，em是指相对于父元素的字体大小 */
+        font-size: 1.2em;
+    }
+
+    #collapsable-nav a span {
+        /* 控制右侧小图片的大小*/
+        font-size: 1em;
+    }
+
+    /* 二者结合使collapsable-nav a标签下的字体和图片大小相同且均为1.2em */
 }
