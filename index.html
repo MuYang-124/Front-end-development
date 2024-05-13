@@ -8,6 +8,8 @@
     <title>My Page</title>
     <link rel="stylesheet" href="CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -65,7 +67,7 @@
                         </li>
                         <!-- hidden-xs在小屏幕设备上隐藏这个列表项 -->
                         <li id="phone" class="hidden-xs">
-                            <a href="https://qm.qq.com/q/cZi1spE3Ly" target="_blank"> <span>contact me</span></a>
+                            <a href="mailto:2604121966@qq.com" target="_blank"> <span>Contact Me</span></a>
                             <div>* From Young</div>
                         </li>
                     </ul>
@@ -75,10 +77,53 @@
             </div>
         </nav>
     </header>
+    <!-- 建立一个联系按钮，用于在小屏幕设备上显示联系信息 -->
+    <div id="contact-btn" class="visible-xs">
+        <a class="btn" href="mailto:2604121966@qq.com">
+            <span class="glyphicon  glyphicon-envelope"></span>
+            Contact Me
+        </a>
+    </div>
+    <div id="xs-from" class="text-center visible-xs">* From Young</div>
+    <!-- header部分结束 -->
+
+    <!-- 主体部分 -->
+    <div id="main-content" class="container">
+        <div class="jumbotron">
+            <!-- img-responsive响应式地显示图片 -->
+            <!-- visible-xs表示在小屏幕设备上显示 -->
+            <img src="images/jumbotron_768.jpg" alt="Picture of main-content" class="img-responsive visible-xs">
+        </div>
+        <div id="home-tiles" class="row">
+            <!-- 默认为12列，这里的col-md-4表示在中等屏幕上占4列，即1/3，其他的同理 -->
+            <!-- 故下面的配比是md：1/3，1/3, 1/3；sm：1/2，1/2,1；xs：1,1,1 -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <a href="">
+                    <div id="menu-tile"><span>menu</span></div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <a href="">
+                    <div id="specials-tile"><span>specials</span></div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <a href="#" target="_blank">
+                    <div id="map-tile">
+                        <!-- iframe用于在网页中显示另一个网页，这里是显示地图 -->
+                        <iframe src="#" width="100%" height="250" frameborder="0" style="border:0"
+                            allowfullscreen></iframe>
+                        <span>map</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 注意加载顺序一定不能错，否则不能实现按钮菜单效果！！！！ -->
     <!-- bootstrap对于jquery有依赖，所以jquery要在bootstrap之前加载 -->
-    <script src="JS/jquery-3.7.1.min.js"></script>
+    <script src="JS/jquery-2.1.4.min.js"></script>
     <script src="JS/bootstrap.min.js"></script>
     <script src="JS/script.js"></script>
 </body>

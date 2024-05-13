@@ -1,8 +1,10 @@
 body {
     font-size: 16px;
     color: #fff;
-    font-family: Georgia, "Times New Roman", Times, serif;
     background-color: #61122f;
+    font-family: 'Oxygen',
+        sans-serif;
+
 }
 
 #header-nav {
@@ -109,13 +111,84 @@ body {
     margin-top: -30px;
 }
 
+/* header部分结束 */
+/* 主体部分开始  */
+.container .jumbotron {
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+}
+
+#menu-tile,
+#specials-tile,
+#map-tile {
+    height: 250px;
+    /* 这里的宽度是指容器的100%,使div和其容器等宽 */
+    width: 100%;
+    margin-bottom: 15px;
+    /* 元素会相对于其正常位置进行定位。 */
+    position: relative;
+    border: 2px solid #3F0C1F;
+    /* hidden的作用是隐藏溢出的内容 */
+    overflow: hidden;
+}
+
+/* 当鼠标悬停在div上时，会出现一个阴影效果。 */
+#menu-tile:hover,
+#specials-tile:hover,
+#map-tile:hover {
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+    background: url('../images/menu-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#specials-tile {
+    background: url('../images/specials-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+/* 这里控制字体部分的样式 */
+#menu-tile span,
+#specials-tile span,
+#map-tile span {
+    /* 绝对定位的元素会脱离正常的文档流，不会影响到其他元素的布局。 */
+    position: absolute;
+    /* 将元素定位到其包含块的右下角。 */
+    bottom: 0;
+    right: 0;
+    /* 设置元素的宽度为其包含块的100%。 */
+    width: 100%;
+    /* 将文本居中对齐。 */
+    text-align: center;
+    /* 设置字体大小为当前字体大小的1.6倍。 */
+    font-size: 1.6em;
+    /* 将文本转换为大写。 */
+    text-transform: uppercase;
+    /* 置背景颜色为黑色。 */
+    background-color: #000;
+    /* 设置文本颜色为白色 */
+    color: #fff;
+    /* 设置元素的不透明度为0.8 */
+    opacity: .8;
+}
+
+/* 主体部分结束  */
+
 /* 以下代码用于响应式设计，根据不同的屏幕尺寸，显示不同的样式。 */
 /* 针对大屏幕的样式 */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .container .jumbotron {
+        background: url('../images/jumbotron_1200.jpg') no-repeat;
+        height: 675px;
+    }
+}
 
 /* 针对中等屏幕的样式 */
 @media (min-width: 992px) and (max-width: 1199px) {
 
+    /* header部分开始 */
     /* 解决上层空间不足问题，缩小图片 */
     #logo-img {
         background: url("../images/logo_mid.png") no-repeat;
@@ -123,14 +196,33 @@ body {
         height: 100px;
         margin: 5px 5px 5px 0;
     }
+
+    /* header部分结束 */
+    /* 主体部分开始 */
+    .container .jumbotron {
+        background: url('../images/jumbotron_992.jpg') no-repeat;
+        height: 558px;
+    }
+
+    /* 主体部分结束 */
 }
 
 /* 针对小屏幕的样式 */
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* 主体部分开始 */
+    .container .jumbotron {
+        background: url('../images/jumbotron_768.jpg') no-repeat;
+        height: 432px;
+    }
+
+    /* 主体部分结束 */
+}
 
 /* 针对超小屏幕的样式 */
 @media (max-width: 767px) {
 
+    /* header部分开始 */
     /* navbar-brand表示网站的标题和小图标部分 */
     /* 标题 */
     .navbar-brand {
@@ -156,15 +248,70 @@ body {
         height: 20px;
     }
 
+    /* 二者结合使collapsable-nav a标签下的字体和图片大小相同且均为1.2em */
     #collapsable-nav a {
-        /* 控制右侧小图片和文字的大小，em是指相对于父元素的字体大小 */
+        /* 控制小图标和文字的大小，em是指相对于父元素的字体大小 */
         font-size: 1.2em;
     }
 
     #collapsable-nav a span {
-        /* 控制右侧小图片的大小*/
+        /* 控制小图标，与字体的大小倍率一致*/
         font-size: 1em;
+        /* 增加右边距，使得小图标和文字之间有一定的间隔 */
+        margin-right: 5px;
     }
 
-    /* 二者结合使collapsable-nav a标签下的字体和图片大小相同且均为1.2em */
+    #contact-btn>a {
+        font-size: 1.5em;
+        display: block;
+        margin: 0 20px;
+        padding: 10px;
+        border: 2px solid #fff;
+        background-color: #f6b319;
+        color: #951c49;
+    }
+
+    #xs-from {
+        margin-top: 5px;
+        font-size: .7em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+    /* header部分结束 */
+    /* 主体部分开始 */
+    .container .jumbotron {
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    #menu-tile,
+    #specials-tile {
+        width: 360px;
+        margin: 0 auto 15px;
+    }
+
+    /* 主体部分结束 */
+}
+
+/* 针对极小屏幕的样式 */
+@media (max-width: 479px) {
+
+    /* header部分开始 */
+    .navbar-brand h1 {
+        /* Restaurant name */
+        padding-top: 5px;
+        font-size: 6vw;
+    }
+
+    /* header部分结束 */
+
+    /* 主体部分开始 */
+    #menu-tile,
+    #specials-tile {
+        width: 280px;
+        margin: 0 auto 15px;
+    }
+
+    /* 主体部分结束 */
 }
