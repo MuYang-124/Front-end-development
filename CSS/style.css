@@ -4,7 +4,6 @@ body {
     background-color: #61122f;
     font-family: 'Oxygen',
         sans-serif;
-
 }
 
 #header-nav {
@@ -74,9 +73,15 @@ body {
     text-align: center;
 }
 
+/* 当悬停在右侧三个按钮上时，会出现一个阴影效果。  */
 #nav-list a:hover {
-    border-radius: 10px;
     background: #e7e7e7;
+    border-radius: 10px;
+}
+
+/* 覆盖bootstrap的默认样式，与悬停时统一使用圆角矩形 */
+.navbar-default .navbar-nav>.active>a {
+    border-radius: 10px;
 }
 
 #nav-list a span {
@@ -132,7 +137,7 @@ body {
     overflow: hidden;
 }
 
-/* 当鼠标悬停在div上时，会出现一个阴影效果。 */
+/* 当鼠标悬停在主页下方的菜单、特价和地图上时，会出现一个阴影效果。 */
 #menu-tile:hover,
 #specials-tile:hover,
 #map-tile:hover {
@@ -172,6 +177,10 @@ body {
     color: #fff;
     /* 设置元素的不透明度为0.8 */
     opacity: .8;
+}
+
+.nav-list:active {
+    background-color: #951c49;
 }
 
 /* 主体部分结束  */
@@ -313,6 +322,11 @@ h3.menu-item-title {
         background: url('../images/jumbotron_1200.jpg') no-repeat;
         height: 675px;
     }
+
+    .container .jumbotron {
+        background: url('../images/jumbotron_1200.jpg') no-repeat;
+        height: 675px;
+    }
 }
 
 /* 针对中等屏幕的样式 */
@@ -321,7 +335,7 @@ h3.menu-item-title {
     /* header部分开始 */
     /* 解决上层空间不足问题，缩小图片 */
     #logo-img {
-        background: url("../images/logo_mid.png") no-repeat;
+        background: url("../images/restaurant-logo_medium.png") no-repeat;
         width: 100px;
         height: 100px;
         margin: 5px 5px 5px 0;
