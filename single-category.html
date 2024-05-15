@@ -37,7 +37,7 @@
                         </p>
                     </div>
                     <!-- d-sm-none表示在sm以下不显示，这里是折叠按钮 -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#collapsable-nav" aria-expanded="false">
                         <!-- 这是一个屏幕阅读器专用的元素，用于描述折叠按钮的功能 -->
                         <span class="sr-only">Toggle navigation</span>
@@ -50,6 +50,10 @@
                 <!-- 右侧的三个图标-->
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li class="visible-xs">
+                            <a href="index.html">
+                                <span class="glyphicon glyphicon-home"></span> Home</a>
+                        </li>
                         <li class="active">
                             <a href="menu-categories.html">
                                 <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs" />
