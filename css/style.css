@@ -1,18 +1,39 @@
 body {
     font-size: 16px;
     color: #fff;
-    background-color: #61122f;
+    background-color: #7a9165;
     font-family: 'Oxygen',
         sans-serif;
 }
 
+@keyframes float {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 -510px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
 #header-nav {
-    background-color: #f6b319;
+    /* 设置背景图片 */
+    background-image: url('../images/CCNU_BG.jpg');
+    background-size: cover;
+    /* 设置背景颜色 */
+    /* background-color: #f6b319; */
     /*border-raious的含义是圆角的意思，这里是设置导航栏的圆角*/
     border-radius: 0;
     /* border的含义是边框的意思，这里是设置导航栏的边框*/
     border: 0;
+    animation: float 60s infinite linear;
 }
+
+
 
 #logo-img {
     background: url("../images/restaurant-logo_large.png") no-repeat;
@@ -31,7 +52,7 @@ body {
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 1px 1px 1px #222;
+    text-shadow: 2px 2px 2px #222;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 0.75;
@@ -55,6 +76,8 @@ body {
 .navbar-brand p span {
     /* welcome to my web */
     vertical-align: middle;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px 1px #222;
 }
 
 .navbar-brand p img {
@@ -69,9 +92,11 @@ body {
 }
 
 #nav-list a {
+    border-radius: 10px;
     color: #951c49;
     text-align: center;
-}
+    text-shadow: 2px 2px 2px 2px #222;
+  }
 
 /* 当悬停在右侧三个按钮上时，会出现一个阴影效果。  */
 #nav-list a:hover {
@@ -81,6 +106,7 @@ body {
 
 /* 覆盖bootstrap的默认样式，与悬停时统一使用圆角矩形 */
 .navbar-default .navbar-nav>.active>a {
+    background: #e7e7e7;
     border-radius: 10px;
 }
 
