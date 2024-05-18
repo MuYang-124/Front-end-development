@@ -189,6 +189,11 @@ body {
     background-position: center;
 }
 
+#map-tile {
+    background: url('../images/location.png') no-repeat;
+    background-position: center;
+}
+
 /* 这里控制字体部分的样式 */
 #menu-tile span,
 #specials-tile span,
@@ -470,7 +475,8 @@ h3.menu-item-title {
     }
 
     #menu-tile,
-    #specials-tile {
+    #specials-tile,
+    #map-tile {
         width: 360px;
         margin: 0 auto 15px;
     }
@@ -555,7 +561,8 @@ h3.menu-item-title {
     /* header部分结束 */
     /* 主体部分开始 */
     #menu-tile,
-    #specials-tile {
+    #specials-tile,
+    #map-tile {
         width: 280px;
         margin: 0 auto 15px;
     }
