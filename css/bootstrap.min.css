@@ -1799,7 +1799,7 @@ a.bg-danger:hover {
 ol,
 ul {
     margin-top: 0;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 ol ol,
@@ -6172,7 +6172,7 @@ a.badge:hover {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    color: inherit;
+    /* color: inherit; */
     background-color: #eee
 }
 
@@ -8067,7 +8067,7 @@ button.close {
 
 @media (max-width:767px) {
     .visible-xs {
-        display: block !important
+        display: block !important;
     }
 
     table.visible-xs {

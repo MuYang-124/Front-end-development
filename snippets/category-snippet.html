@@ -1,8 +1,11 @@
-<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-  <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
-    <div class="category-tile">
-      <img width="200" height="200" src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
-      <span>{{name}}</span>
-    </div>
-  </a>
+<!-- 菜单部分，即一级菜单Menu Categories部分的每个小分类 -->
+<!-- 中型屏幕1/4，小型屏幕1/3，超小型屏幕1/2，极小型屏幕1 -->
+<div <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+    <!-- $dc.loadMenuItems('{{short_name}}')的作用是加载菜单项，short_name是菜单分类的简称，比如appetizers、main-dishes等 -->
+    <a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
+        <div class="category-tile">
+            <img width="200" height="200" src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+            <span>{{name}}</span>
+        </div>
+    </a>
 </div>
